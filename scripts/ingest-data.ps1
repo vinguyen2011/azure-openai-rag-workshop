@@ -22,7 +22,7 @@ if ([string]::IsNullOrEmpty($env:INDEX_NAME)) {
   [Environment]::SetEnvironmentVariable('INDEX_NAME', 'kbindex')
 }
 
-$api_mode = false
+$api_mode = true
 
 if ($api_mode) {
   Write-Host 'Uploading PDF files to the ingestion API'

@@ -6,7 +6,7 @@ if azd_env=$(azd env get-values); then
   export $(echo "$azd_env" | xargs)
 fi
 
-api_mode=false
+api_mode=true
 
 if [ "$api_mode" = true ]; then
   echo 'Uploading PDF files to the ingestion API'
