@@ -9,8 +9,7 @@ public class EmbeddingModelProducer {
 
   @Produces
   public EmbeddingModel embeddingModel() {
-    // TODO: initialize embedding model here
-    return null;
+    return new AllMiniLmL6V2EmbeddingModel();
   }
 }
 

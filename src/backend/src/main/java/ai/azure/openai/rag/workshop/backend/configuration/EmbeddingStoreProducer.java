@@ -11,10 +11,21 @@ import java.net.URISyntaxException;
 
 public class EmbeddingStoreProducer {
 
+  @ConfigProperty(name = "SEARCH_INDEX", defaultValue = "kbindex")
+  String searchIndexName;
+
+  @ConfigProperty(name = "QDRANT_URL", defaultValue = "http://localhost:6334")
+  String qdrantUrl;
+
   @Produces
-  public EmbeddingStore<TextSegment> embeddingStore() {
-    // TODO: initialize embedding store here
-    return null;
+  public EmbeddingStore<TextSegment> embeddingStore() throws URISyntaxException {
+    String qdrantHostname = new URI(qdrantUrl).getHost();
+    int qdrantPort = new URI(qdrantUrl).getPort();
+    return QdrantEmbeddingStore.builder()
+      .collectionName(searchIndexName)
+      .host(qdrantHostname)
+      .port(qdrantPort)
+      .build();
   }
 }
 

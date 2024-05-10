@@ -6,7 +6,7 @@
   <groupId>ai.azure.openai.rag.workshop</groupId>
   <artifactId>backend-java-quarkus</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-  <name>Azure OpenAI RAG Workshop :: Quarkus Backend</name>
+  <name>Gemini RAG Workshop :: Quarkus Backend</name>
 
   <properties>
     <compiler-plugin.version>3.12.1</compiler-plugin.version>
@@ -50,10 +50,6 @@
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
-      <artifactId>quarkus-smallrye-openapi</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.quarkus</groupId>
       <artifactId>quarkus-arc</artifactId>
     </dependency>
     <dependency>
@@ -62,25 +58,26 @@
     </dependency>
     <dependency>
       <groupId>dev.langchain4j</groupId>
-      <artifactId>langchain4j-azure-open-ai</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.azure</groupId>
-      <artifactId>azure-identity</artifactId>
-      <version>1.12.0</version>
-    </dependency>
-    <dependency>
-      <groupId>dev.langchain4j</groupId>
-      <artifactId>langchain4j-ollama</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-qdrant</artifactId>
     </dependency>
     <dependency>
       <groupId>dev.langchain4j</groupId>
+      <artifactId>langchain4j-vertex-ai-gemini</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-embeddings-all-minilm-l6-v2</artifactId>
-      <version>${langchain4j.version}</version>
+      <version>0.28.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.tinylog</groupId>
+      <artifactId>tinylog-impl</artifactId>
+      <version>2.6.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.tinylog</groupId>
+      <artifactId>slf4j-tinylog</artifactId>
+      <version>2.6.2</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>

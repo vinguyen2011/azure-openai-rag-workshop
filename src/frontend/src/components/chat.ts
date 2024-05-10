@@ -54,7 +54,7 @@ export const defaultOptions: ChatComponentOptions = {
   stream: false,
   chunkIntervalMs: 30,
   apiUrl: '',
-  enablePromptSuggestions: true,
+  enablePromptSuggestions: false,
   promptSuggestions: [
     'How to search and book rentals?',
     'What is the refund policy?',
@@ -62,7 +62,7 @@ export const defaultOptions: ChatComponentOptions = {
   ],
   messages: [],
   strings: {
-    promptSuggestionsTitle: 'Ask anything or try an example',
+    promptSuggestionsTitle: 'ING investments chatbot',
     citationsTitle: 'Citations:',
     followUpQuestionsTitle: 'Follow-up questions:',
     showThoughtProcessTitle: 'Show thought process',
